@@ -1,0 +1,11 @@
+# Core Packages
+import streamlit as st
+
+#Load ML Packages
+import joblib
+import os
+
+def run_ml_app():
+    st.subheader("From ML Section")
+    st.write("It is working!")
+    st.success("Amazing")
