@@ -58,10 +58,10 @@ def main():
 
         st.write("""
 			#### 💾 Datasource
-				- https://archive.ics.uci.edu/ml/datasets/Early+stage+diabetes+risk+prediction+dataset.
+				- https://github.com/MHidayatz/LendingClub_HeicodersAI200/blob/main/data/lc_trainingset.csv
 			#### App Content
 				- EDA Section: Exploratory Data Analysis of Data
-				- ML Section: ML Predictor App
+				- ML Section: ML Predictor App - Under construction
 
 			""")
     elif choice == "EDA":

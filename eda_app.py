@@ -23,7 +23,7 @@ def load_data(data):
     return df
 
 def run_eda_app():
-    st.subheader("From Exploratory Data Analysis")
+    st.subheader("EDA - Exploratory Data Analysis")
     #df = pd.read_csv("data/lc_trainingset.csv")
     df = load_data("data/lc_trainingset.csv")
     
