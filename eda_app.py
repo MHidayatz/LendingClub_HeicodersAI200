@@ -23,7 +23,7 @@ def load_data(data):
     return df
 
 def run_eda_app():
-    st.subheader("EDA - Exploratory Data Analysis")
+    st.write("EDA - Exploratory Data Analysis - Descriptive")
     #df = pd.read_csv("data/lc_trainingset.csv")
     df = load_data("data/lc_trainingset.csv")
     
@@ -129,6 +129,7 @@ def run_eda_app():
 
 
     elif submenu == "Plots":
+        st.write("EDA - Exploratory Data Analysis - Plots")
         with st.expander("Distribution of Loan Status Class"):
             fig = px.bar(df['loan_status'].value_counts(), width=800, height=500)
             st.plotly_chart(fig)
