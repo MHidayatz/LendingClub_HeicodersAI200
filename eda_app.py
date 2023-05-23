@@ -23,7 +23,6 @@ def load_data(data):
     return df
 
 def run_eda_app():
-    st.write("EDA - Exploratory Data Analysis - Descriptive")
     #df = pd.read_csv("data/lc_trainingset.csv")
     df = load_data("data/lc_trainingset.csv")
     
@@ -32,6 +31,7 @@ def run_eda_app():
     submenu = st.sidebar.selectbox("Submenu", ["Descriptive", "Plots","Data Cleaning"] )
     # Descriptive Summary
     if submenu == "Descriptive":
+        st.write("EDA - Exploratory Data Analysis - Descriptive")
         with st.expander("Dataframe"):
             st.dataframe(df)
         with st.expander("Data Rows/Columns"):
@@ -53,7 +53,7 @@ def run_eda_app():
 
     
     elif submenu == "Data Cleaning":
-        st.subheader("Data Cleaning")   
+        st.write("EDA - Exploratory Data Analysis - Data Cleaning")
         # Apply funnction to convert Loan status to 1 and 0
         def change_loan_status(loan_status):
             if loan_status in ['Fully Paid', 'Charged Off']:
