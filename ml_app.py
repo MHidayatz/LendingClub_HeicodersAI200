@@ -7,5 +7,4 @@ import os
 
 def run_ml_app():
     st.subheader("From ML Section")
-    st.write("It is working!")
-    st.success("Amazing")
+    st.info("This is under construction!")
