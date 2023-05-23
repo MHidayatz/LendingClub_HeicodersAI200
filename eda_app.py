@@ -130,6 +130,11 @@ def run_eda_app():
 
     elif submenu == "Plots":
         st.subheader("Plots")
+        with st.expander("Distribution of Loan Status Class"):
+            fig = px.bar(df['loan_status'].value_counts(), width=800, height=500)
+            st.plotly_chart(fig)
+            st.write(df['loan_status'].value_counts())
+
         with st.expander("Distribution of Loan Status with Correlated Variables"):
             fig = px.scatter(df, 
                             x='installment', 
@@ -154,6 +159,19 @@ def run_eda_app():
             st.plotly_chart(trace1)
             st.plotly_chart(trace2)
             st.write('Similar frequency distribution between the 2 variables, hence they can be considered as dependent variables. However, both loan status peak around the same value for each variables, hence may not serve as good features.')
+
+        with st.expander("Distribution of Pub_rec_bankruptcies and Pub_rec"):
+            df['loan_status'] = df['loan_status'].apply(str)
+            trace1 = px.histogram(df, 
+                                  x = 'pub_rec_bankruptcies', 
+                                  color = 'loan_status',  
+                                  height = 500, width = 700)
+            trace2 = px.histogram(df, 
+                                  x = 'pub_rec', 
+                                  color = 'loan_status', 
+                                  height = 500, width = 700)
+            st.plotly_chart(trace1)
+            st.plotly_chart(trace2)
 
         with st.expander("Corelation Matrix"):
             drop_column = df.copy()
