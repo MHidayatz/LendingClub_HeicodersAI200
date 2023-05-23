@@ -129,7 +129,6 @@ def run_eda_app():
 
 
     elif submenu == "Plots":
-        st.subheader("Plots")
         with st.expander("Distribution of Loan Status Class"):
             fig = px.bar(df['loan_status'].value_counts(), width=800, height=500)
             st.plotly_chart(fig)
