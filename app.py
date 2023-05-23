@@ -9,8 +9,8 @@ from ml_app import run_ml_app
 
 html_temp = """
 		<div style="background-color:#3872fb;padding:10px;border-radius:10px">
-		<h1 style="color:white;text-align:center;">Early Stage DM Risk Data App </h1>
-		<h4 style="color:white;text-align:center;">Diabetes </h4>
+		<h1 style="color:white;text-align:center;">Lending Club Defaulters Prediction App </h1>
+		<h4 style="color:white;text-align:center;">Heicoders AI200: Applied Machine Learning Capstone </h4>
 		</div>
 		"""
 
@@ -21,7 +21,7 @@ def local_css(file_name):
 local_css("style/style.css")
 
 def main():
-    st.title("Heicoders AI200: Applied Machine Learning")
+    stc.html(html_temp)
 
     menu = ["Home","EDA","ML","About"]
     choice = st.sidebar.selectbox("Menu", menu)
