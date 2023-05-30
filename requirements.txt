@@ -5,3 +5,4 @@ plotly==5.8.0
 scikit_learn
 streamlit
 streamlit_option_menu==0.3.2
+xgboost
