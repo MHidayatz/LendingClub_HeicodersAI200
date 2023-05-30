@@ -23,7 +23,7 @@ local_css("style/style.css")
 def main():
     stc.html(html_temp)
 
-    menu = ["Home","EDA","ML","About"]
+    menu = ["Home","EDA","About"]
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Home":
